@@ -104,24 +104,11 @@ Rates are roughly bell-shaped around 10%, with a right-hand tail of high-burden 
 - Omitted variables, such as fuel prices and housing tenure, may affect the estimates.
 - [Any data-quality caveats.]
 
----
-
-## How to Run
-
-```bash
-git clone [https://github.com/23saisharan/Energy-Economics-Project.git](https://github.com/23saisharan/Energy-Economics-Project.git)
-cd Energy-Economics-Project
-pip install -r requirements.txt
-jupyter notebook notebooks/01_fuel_poverty_analysis.ipynb
-```
-
----
-
 
 ---
 
 ## Author
 
 **Saisharan Ravichandran** · BSc Economics, University of Bath  
-[LinkedIn](https://www.linkedin.com/in/your-profile) · [GitHub](https://github.com/23saisharan)
+[LinkedIn](www.linkedin.com/in/saisharan-ravichandran) · [GitHub](https://github.com/23saisharan)
 
