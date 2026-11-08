@@ -1,4 +1,4 @@
-# Energy-Economics-Project
+# Fuel Poverty in England (2024) - Data Analytics/ Econometrics Study
 
 Project Outline: 
 
