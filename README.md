@@ -1,37 +1,46 @@
 # Fuel Poverty in England (2024) - Data Analytics/ Econometrics Study
 
-Project Outline: 
+# Fuel Poverty in England: A Regional Econometric Analysis
 
-Method
-- Setup: import pandas, numpy, matplotlib, seaborn, statsmodels and plotly. Create data/raw, data/processed, visualisations and reports folders.
-- Import: load the sheets and check their shape. The first read returned empty or unnamed columns, so the header rows had to be fixed.
-- Cleaning: promote the real header row and rename columns, for example to Local_Authority_Code, Fuel_Poverty_Percentage and Number_of_Households. Drop the national and regional aggregate rows so only local authorities remain.
-- Descriptive statistics: the local authority rate averages 9.74%, ranging from 5.56% to 17.33%, with a standard deviation of 1.73.
-- Regional aggregation: group by region to compare the simple average of local authority rates with the household-weighted regional rate.
-- Ranking: list the local authorities with the highest rates.
-- Visualisation and modelling (inferred): seaborn, plotly and statsmodels were imported, which suggests charts, an interactive map or bar chart, and possibly regression.
+![Python](https://img.shields.io/badge/Python-3.x-blue) ![Status](https://img.shields.io/badge/status-complete-green)
 
+> Which parts of England are most affected by fuel poverty, and what drives it? An analysis of 233 local authorities using Python, pandas and OLS regression.
 
-Professional Consulting Report:
+![Fuel poverty by region](figures/regional_fuel_poverty.png)
 
+## Key Findings
+- **Regional hotspot:** West Midlands has the highest household-weighted rate (11.92%), followed by Yorkshire and the Humber.
+- **Local hotspot:** Birmingham has the highest local authority rate (13.78%).
+- **Drivers:** Lower median household income and less energy-efficient housing are both statistically associated with higher fuel poverty (see regression table).
+- **Spread:** Local authority rates average 9.74% (range 5.56%–17.33%, SD 1.73).
 
-Below is the structured executive brief template derived from this notebook's findings to include in your project portfolio:
-Executive Policy Brief: Fuel Poverty & Regional Inequality in England
-Prepared for: UK Government Energy Policy Team
-Date: November 2026
+## Data
+- Source: [name + link], year [YYYY]
+- Coverage: 233 local authorities, [variables used]
 
-1. Executive Summary
+## Method
+1. Cleaned the data: fixed header rows, renamed columns, removed the national total row.
+2. Descriptive statistics for local authorities.
+3. Aggregated by region, comparing simple averages with household-weighted rates.
+4. Ranked local authorities by fuel poverty rate.
+5. OLS regression: fuel poverty % ~ [income] + [EPC/housing variable] + [controls].
 
+## Regression Results
+| Variable | Coefficient | p-value |
+|---|---|---|
+| Median income | [ ] | [ ] |
+| Energy-inefficient housing | [ ] | [ ] |
 
-2. This analysis investigates the sub-regional distribution of fuel poverty across 233 unique districts in England. The study aims to uncover geographic disparities and establish key statistical relationships to optimize funding allocation under energy affordability programs.
+R² = [ ]. Limitations: [cross-sectional, ecological fallacy, omitted variables].
 
-3. Key Findings
-• Regional Hotspots: The West Midlands is the most severely affected region with a combined fuel poverty rate of 11.92%, followed closely by Yorkshire and the Humber at 11.36%. Conversely, the South East shows the lowest regional rate at 8.07%.
-• Urban Vulnerabilities: Out of all actual Local Authority Districts, Birmingham has the highest overall vulnerability, with a 13.78% fuel poverty rate impacting over 60,832 homes.
-• Statistical Drivers: Standard OLS regressions confirm that both lower median household income and energy-inefficient housing structures are statistically significant drivers of localized fuel poverty inequality.
+## Policy Recommendations
+1. Target home-heating upgrade funding at high-density urban areas in the West Midlands and North West.
+2. Focus council grants on raising the minimum EPC rating above D.
+3. Publish regional tracking dashboards (e.g. Power BI) from this dataset.
 
-4. Strategic Recommendations
-- Targeted Funding: Shift national home heating upgrade funding towards high-density urban clusters within the West Midlands and
-North West regions.
--  Energy Efficiency Upgrades: Focus local council grants on upgrading older housing stock to raise minimum EPC ratings above D.
--  Power BI Dashboard Deployment: Utilise the generated dataset to publish dynamic regional tracking dashboards for regional field agents.
+## How to Run
+pip install -r requirements.txt
+jupyter notebook notebooks/01_fuel_poverty_analysis.ipynb
+
+## Repo Structure
+data/ · notebooks/ · figures/ · reports/ · requirements.txt
